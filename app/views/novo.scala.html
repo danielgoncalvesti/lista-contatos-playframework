@@ -1,0 +1,18 @@
+@(header: String, form: Form[Contato])
+
+@main("Novo Contato - Agenda"){
+
+<h1>@header</h1>
+
+@helper.form(action = routes.ContatoController.salva()){
+
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" value="@form("nome").value">
+<label for="telefone">Telefone:</label>
+<input type="text" id="telefone" name="telefone" value="@form("telefone").value">
+
+
+<button type="submit">Salvar</button>
+}
+
+}
